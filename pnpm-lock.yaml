@@ -35,15 +35,27 @@ dependencies:
   '@angular/ssr':
     specifier: ^17.0.0
     version: 17.0.1(@angular/common@17.0.3)(@angular/core@17.0.3)
+  '@ngrx/store':
+    specifier: 17.0.0-rc.0
+    version: 17.0.0-rc.0(@angular/core@17.0.3)(rxjs@7.8.1)
+  '@ngrx/store-devtools':
+    specifier: 17.0.0-rc.0
+    version: 17.0.0-rc.0(@ngrx/store@17.0.0-rc.0)(rxjs@7.8.1)
   express:
     specifier: ^4.18.2
     version: 4.18.2
   rxjs:
     specifier: ~7.8.0
     version: 7.8.1
+  todomvc-app-css:
+    specifier: ^2.4.3
+    version: 2.4.3
   tslib:
     specifier: ^2.3.0
     version: 2.6.2
+  uuid:
+    specifier: ^9.0.1
+    version: 9.0.1
   zone.js:
     specifier: ~0.14.2
     version: 0.14.2
@@ -67,6 +79,9 @@ devDependencies:
   '@types/node':
     specifier: ^18.18.0
     version: 18.18.10
+  '@types/uuid':
+    specifier: ^9.0.7
+    version: 9.0.7
   jasmine-core:
     specifier: ~5.1.0
     version: 5.1.1
@@ -2177,6 +2192,28 @@ packages:
       call-bind: 1.0.5
     dev: true
 
+  /@ngrx/store-devtools@17.0.0-rc.0(@ngrx/store@17.0.0-rc.0)(rxjs@7.8.1):
+    resolution: {integrity: sha512-eY4+Q/MZ01rObhJJiwto3YIf8DaM2hGJuG25hIwaIiucFMQYG/8pqVa9EbUrmynchal15TrZaSuUVZyRwM4qQw==}
+    peerDependencies:
+      '@ngrx/store': 17.0.0-rc.0
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@ngrx/store': 17.0.0-rc.0(@angular/core@17.0.3)(rxjs@7.8.1)
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    dev: false
+
+  /@ngrx/store@17.0.0-rc.0(@angular/core@17.0.3)(rxjs@7.8.1):
+    resolution: {integrity: sha512-MR3ObHTA81dziP3MvxrPsYI08wH1zpLALeZz9fTEE5PVhhLxterTWIqwVrqQ2ouL0ZrObiZNul3YZbGrzIciOg==}
+    peerDependencies:
+      '@angular/core': ^17.0.0
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@angular/core': 17.0.3(rxjs@7.8.1)(zone.js@0.14.2)
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    dev: false
+
   /@ngtools/webpack@17.0.1(@angular/compiler-cli@17.0.3)(typescript@5.2.2)(webpack@5.89.0):
     resolution: {integrity: sha512-IfiWIBY1GntfJFV/U1CSOHZ7zF5p0zFMFzux7/iGXUXit299LTdJ5mZTe9++lFcH6dPHgEPWlinuYAfzorY4ng==}
     engines: {node: ^18.13.0 || >=20.9.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -2496,6 +2533,10 @@ packages:
     resolution: {integrity: sha512-MK9V6NzAS1+Ud7JV9lJLFqW85VbC9dq3LmwZCuBe4wBDgKC0Kj/jd8Xl+nSviU+Qc3+m7umHHyHg//2KSa0a0Q==}
     dependencies:
       '@types/node': 18.18.10
+    dev: true
+
+  /@types/uuid@9.0.7:
+    resolution: {integrity: sha512-WUtIVRUZ9i5dYXefDEAI7sh9/O7jGvHg7Df/5O/gtH3Yabe5odI3UWopVR1qbPXQtvOxWu3mM4XxlYeZtMWF4g==}
     dev: true
 
   /@types/ws@8.5.9:
@@ -6865,6 +6906,11 @@ packages:
       is-number: 7.0.0
     dev: true
 
+  /todomvc-app-css@2.4.3:
+    resolution: {integrity: sha512-mSnWZaKBWj9aQcFRsGguY/a8O8NR8GmecD48yU1rzwNemgZa/INLpIsxxMiToFGVth+uEKBrQ7IhWkaXZxwq5Q==}
+    engines: {node: '>=4'}
+    dev: false
+
   /toidentifier@1.0.1:
     resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==}
     engines: {node: '>=0.6'}
@@ -7004,6 +7050,11 @@ packages:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
     hasBin: true
     dev: true
+
+  /uuid@9.0.1:
+    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
+    hasBin: true
+    dev: false
 
   /validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
